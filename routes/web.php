@@ -11,6 +11,12 @@
 |
 */
 
+//REFERENSI --> https://vnshares.com/laravel-5-4-and-5-5-native-user-authentication-role-authorization/
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
